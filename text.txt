@@ -1,2 +1,6 @@
 http://localhost:8081/actuator/health
 http://localhost:8081/demo/data
+
+docker run -d -p 8081:8080 springboot-aws-deploy
+
+
