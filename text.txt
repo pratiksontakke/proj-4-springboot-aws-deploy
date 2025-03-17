@@ -1,6 +1,13 @@
-http://localhost:8081/actuator/health
-http://localhost:8081/demo/data
+http://localhost:8080/actuator/health
+http://localhost:8080/demo/data
 
 docker run -d -p 8081:8080 springboot-aws-deploy
 
+codebuild-springboot-aws-deploy-service-role
 
+CMD-SHELL,curl -f http://localhost:8080/actuator/health || exit 1
+
+http://15.206.79.243:8080/demo/data
+
+
+AWSCodePipelineServiceRole-ap-south-1-AWS-demo-pipeline
