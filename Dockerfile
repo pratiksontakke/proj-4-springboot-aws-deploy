@@ -14,6 +14,9 @@ RUN mvn package -DskipTests
 FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
+# Install curl in the final image
+RUN apk --no-cache add curl
+
 # Expose port 8080
 EXPOSE 8080
 
